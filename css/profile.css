@@ -71,3 +71,66 @@ nav ul li a:hover {
   color: var(--black);
 }
 
+.spacing{
+  display: flex;
+  flex-direction: row;
+}
+
+.card-info {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 740px;
+  text-align: center;
+  margin-right:20px ;
+}
+
+.card-detail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+  width: 100%;
+  height: 900px;
+  text-align: left;
+  padding-left:20px;
+  padding-right: 20px;
+}
+.card-pic {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  background-image: url('../assests/img/profile-logo.png');
+  background-size: contain;
+  background-position: center center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.box {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 350px;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
