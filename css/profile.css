@@ -82,6 +82,8 @@ nav ul li a:hover {
   height: 740px;
   text-align: center;
   margin-right:20px ;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .card-detail {
@@ -92,6 +94,7 @@ nav ul li a:hover {
   text-align: left;
   padding-left:20px;
   padding-right: 20px;
+  border-radius: 20px;
 }
 .card-pic {
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
@@ -115,7 +118,7 @@ nav ul li a:hover {
   outline: 0;
   display: inline-block;
   color: var(--white);
-  background-color: var(--black);
+  background-color: var(--blue);
   text-align: center;
   cursor: pointer;
   width: 350px;
@@ -128,7 +131,7 @@ button {
   display: inline-block;
   padding: 8px;
   color: var(--white);
-  background-color: var(--black);
+  background-color: var(--blue);
   text-align: center;
   cursor: pointer;
   width: 100%;

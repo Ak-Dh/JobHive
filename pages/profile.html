@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>JobHive</title>
-    <link rel="stylesheet" type="text/css" href="../css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/profile.css" />
     <link rel="stylesheet" type="text/css" href="../css/custom-themes.css" />
     <link
       rel="stylesheet"
@@ -41,9 +41,6 @@
       <div class="spacing">
         <div class="card-info">
           <div class="card-pic"></div>
-          <p>
-            <div class="box">Personal Info</div>
-          </p>
           <h1>Fake Name</h1>
           <p class="title">Student at Jacobs University Bremen</p>
           <p class="title">2020-2023</p>
@@ -59,6 +56,15 @@
             <i class="fa fa-phone" style="font-size: medium"></i> Phone: +49
             012020303030
           </p>
+          <button onclick="openPage('saved-jobs')">
+            <i class="fa fa-bookmark" style="font-size: medium"></i> Saved Jobs
+          </button>
+          <button onclick="openPage('applied-jobs')">
+            <i class="fa fa-check-circle" style="font-size: medium"></i> Applied Jobs
+          </button>
+          <button onclick="openPage('post-job')">
+            <i class="fa fa-edit" style="font-size: medium"></i> Post a Job
+          </button>
         </div>
         <!--  -->
         <div class="card-detail">
@@ -77,5 +83,8 @@
         </div>
       </div>
     </main>
+    <script>function openPage(pageName) {
+      window.location.href = "./" + pageName + ".html";
+  }</script>
   </body>
 </html>
