@@ -1,0 +1,21 @@
+/* Light Theme Colors */
+:root {
+    --blue:rgb(89, 170, 214);
+    --text-field-light-grey: rgb(241, 235, 235);
+    --white:#fff;
+    --nav-selected:#ffffffe4;
+    --nav-hover:rgb(116, 193, 235);
+    --black: rgb(0,0,0);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --blue: rgb(0, 100, 157);
+      --text-field-light-grey: rgb(241, 235, 235);
+      --white:#fff;
+      --nav-selected:#ffffffe4;
+      --nav-hover:rgb(2, 120, 188);
+      --black: rgb(0,0,0);
+    }
+  }
+  

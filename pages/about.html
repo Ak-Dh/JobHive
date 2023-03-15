@@ -14,7 +14,10 @@
       If the file is not in the same directory as the css file then use ../ to go to the
       root directory and the provide the path to the CSS file-->
     <link rel="stylesheet" type="text/css" href="../css/about.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!--When you are trying  to link your javaScript file and html file we use
     the script tag.This must be placed within the head tag. The script tag has 
     a parameter which is the 'src' paramter, the 'src' paramter is provided with
@@ -30,7 +33,7 @@
     and organization of your site, since it provides a clear indicator of where the 
     navigation begins and ends. -->
     <nav>
-      <a class="headTitle" href="./home.html">JobHive</a>
+      <div><a class="headTitle" href="./home.html">JobHive</a></div>
       <!--<ul> and <ol>: Define unordered and ordered lists, respectively
         in an orderd list the elements will be numbered, whereas in an 
         unordered list the elements will have bullet points-->
@@ -40,10 +43,20 @@
         <!--a style is explicitly mentione here so that whn the user is in the home page the about tab in the 
         top navigation bar will be semi-transperent so that the usdr will know which tab they are in. while
         other elemtns will have the navigation styl whihc has been defined for nav ul li a-->
-        <li><a href="./about.html" style="background-color: #ffffffe4; color: black">About</a></li>
+        <li>
+          <a
+            href="./about.html"
+            style="background-color: #ffffffe4; color: black"
+            >About</a
+          >
+        </li>
         <li><a>Other</a></li>
       </ul>
-      <a class="profile" href="./profile.html"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
+      <div>
+        <a class="profile" href="./profile.html"
+          ><i class="fa fa-fw fa-user-circle"></i>Profile</a
+        >
+      </div>
     </nav>
     <header class="divContainer">
       <h1>About JobHive</h1>

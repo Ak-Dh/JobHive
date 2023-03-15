@@ -1,171 +1,73 @@
-/*When you are naming the style in CSS there are two things to note
-1.) if you start the name of the style without a '.' then the name of the style must be the same
-    as the tag name. For example if the style name is nav then it apllies the style for nav.But keep 
-    in mind that whn you use such style the style will be applied for all instances of nav. For 
-    eaxpmle the style mentioned below nav li it mentions the style for all elemts of the lsit that are 
-    under/within the nav tag. if the tag name is li then every list elemt in the in the respective file 
-    will all have the same style.In this case you will not have to provide the class parameter of the 
-    tag where you want to aplly the style as you are using the tag name for the style.  
-2.) if you want to have custom/different style for a tag then we start the name of the style with a '.'
-    eg: .my-style. inthis case we need to explicityle mention in the theml page the class for the tag where you
-    want the custom desgin to be apllied. Hence this will aplly the design only in the areas where you 
-    have mentioned in the class parameter of the tag the design name */
 
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      line-height: 1.5;
-    }
-    
-    .headTitle {
-      /*display: block;: Sets the display property of the <a> element to block, 
-      allowing it to be styled with padding and margin.*/
-      display: block;
-      color: #ffffff;
-      /* make sure to add disply:bloack so that the text align will work */
-      text-align: center;
-      /*removesthe underline of the hyperlink*/
-      text-decoration: none;
-      font-size: large;
-    }
-    
-    .profile {
-      /*display: block;: Sets the display property of the <a> element to block, 
-        allowing it to be styled with padding and margin.*/
-      display: block;
-      color: #ffffff;
-      /* make sure to add disply:bloack so that the text align will work */
-      text-align: center;
-      /*removesthe underline of the hyperlink*/
-      text-decoration: none;
-      font-size: large;
-    }
-    
-    nav {
-      display: flex;
-      background-color: #0b75cc;
-      /* 
-      we are commeenting this as if the position: fixed stament is used then it causes the top navigation bar to 
-      overlap/stack over the body so if you want to contiue below the nav bar then we need to add some paddin so 
-      that whatever you want to display below the nav bar will appear below the nav bar and not behind it.
-      .divContainer is an example of a style to be added so that the text will appear below the nav bar if the position
-      paramter is used.if it is not used then the txt will automaatically appear below it. the position paramter is used
-      so that the empty white space on the left and right side of the (horizontal) nav bar can be removed 
-      (by setting left paramter with vlaue 0.
-      */
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      justify-content: space-between;
-    }
-    
-    nav a {
-      float: left;
-      /*display: block;: Sets the display property of the <a> element to block, 
-      allowing it to be styled with padding and margin.*/
-      display: block;
-      color: white;
-      text-align: center;
-      /* Applies padding to the top and bottom (20px) and left and right (30px) of the navigation links. */
-      padding: 20px 30px;
-      /*removesthe underline of the hyperlink*/
-      text-decoration: none;
-    }
-    
-    /*this is the design is set for the elements which have a hyperlink of the unordered list when you hover over the link*/
-    nav a:hover {
-      background-color: #008cff;
-      color: black;
-    }
-    
-    /* 
-    used to provide padding so thagt the text that you want to display below the nav bar will appear bwlow it when 
-    the postion paramter is used for the container(nav bar)
-    */
-    /* .divContainer {
-      padding-top: 60px;
-    } */
-    
-    /*this is the design set for the unordred list as a whole and not fo its individual elements*/
-    nav ul {
-      /*When you apply display: flex to a container element, 
-        the container becomes a flexible container, and its 
-        child elements become flex items. The flex container         
-        is automatically laid out in a horizontal row, with 
-        each child element displayed in a column, using other 
-        CSS properties such as flex-direction, justify-content, 
-        and align-items, you can change the layout and positioning 
-        of the flex items in the container.*/
-      display: flex;
-      /*The flex-direction property is used to specify the direction of the main axis along which the 
-        flex items are laid out in the flex container. There are four possible values for flex-direction:
-        row: The main axis is horizontal, and the flex items are laid out in a row from left to right.
-        row-reverse: The main axis is horizontal, and the flex items are laid out in a row from right to left.
-        column: The main axis is vertical, and the flex items are laid out in a column from top to bottom.
-        column-reverse: The main axis is vertical, and the flex items are laid out in a column from bottom to top.*/
-      flex-direction: row;
-      /* It removes the bullet points from the list items in the <ul> element*/
-      list-style: none;
-      /*we need to set the margin to 0 as the default value of the margin variable is a non zero value. this sets the space arrounf the list elemt to zero*/
-      margin: 0;
-      /*Th padding is set to 0 as the deault value is a non zero value. If the value is not set to zero the default padding value for the elemtns of an unorderd list will place some paddind befor the first elemt of the list(to its left so if you dont want that addiontal spce then you need to mention the padding as 0*/
-      padding: 0;
-    }
-    
-    
-    /* this is the design is set for the individual elements of the unordered list */
-    nav ul li {
-      margin: 0,10px;
-    } 
-    
-    
-    /*this is the design is set for the elements which have a hyperlink of the unordered list*/
-    nav ul li a {
-      float: left;
-      /*display: block;: Sets the display property of the <a> element to block, 
-      allowing it to be styled with padding and margin.*/
-      display: block;
-      color: white;
-      text-align: center;
-      font-size: medium;
-      /* Applies padding to the top and bottom (20px) and left and right (30px) of the navigation links. */
-      padding: 22px 40px;
-      /*removesthe underline of the hyperlink*/
-      text-decoration: none;
-    }
-    
-    /*this is the design is set for the elements which have a hyperlink of the unordered list when you hover over the link*/
-    nav ul li a:hover {
-      background-color: #008cff;
-      color: black;
-    }
-    
-    /*
-    //Change the color of links on hover
-    nav li a:hover {
-        background-color: white;
-        color: #0b75cc;
-    }
-          
-    //Add a color to the active/current link
-    nav li a.active {
-        background-color: #aa8304;
-        color: red;
-    } 
-    */
-    
-    footer {
-      padding-left: 20px;
-      font-family: "Times New Roman";
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;
-      background-color: #0b75cc;
-    }
-    
-    /**/
-    
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.headTitle {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  font-size: xx-large;
+  margin: 0;
+  padding: 20px;
+}
+
+.profile {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 62px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 11%;
+  justify-content: space-between;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover);
+  color: var(--black);
+}
+
+.divContainer {
+  margin-left: 12%;
+}
+
+nav ul {
+ display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0px 0px;
+} 
+
+nav ul li a {
+  float: left;
+  display: block;
+  color: var(--white);
+  text-align: center;
+  font-size: medium;
+  text-decoration: none;
+  padding: 20px 62px;
+}
+
+nav ul li a:hover {
+  background-color: var(--nav-hover);
+  color: var(--black);
+}
+
