@@ -71,3 +71,41 @@ nav ul li a:hover {
   color: var(--black);
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.search-container input[type=text] {
+  width: 80%;
+  padding: 20px 20px;
+  margin: 0;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+}
+
+.search-container button[type=submit] {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  margin: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-container button[type=submit]:hover {
+  background-color: var(--nav-hover);
+}
+
+.magnified-text{
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 20%;
+}
