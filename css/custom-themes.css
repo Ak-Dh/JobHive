@@ -6,6 +6,8 @@
     --nav-selected:#ffffffe4;
     --nav-hover:rgb(116, 193, 235);
     --black: rgb(0,0,0);
+    --search-input-field: #f1f1f1;
+    --grey: #808080;
   }
   
   @media (prefers-color-scheme: dark) {
@@ -16,6 +18,8 @@
       --nav-selected:#ffffffe4;
       --nav-hover:rgb(2, 120, 188);
       --black: rgb(0,0,0);
+      --search-input-field: #f1f1f1;
+      --grey: #808080;
     }
   }
   

@@ -84,13 +84,13 @@ nav ul li a:hover {
   border: none;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-  background-color: #f1f1f1;
+  background-color: var(--search-input-field);
   font-size: 16px;
 }
 
 .search-container button[type=submit] {
   background-color: var(--blue);
-  color: white;
+  color: var(--white);
   border: none;
   padding: 20px 20px;
   margin: 0;
