@@ -1,63 +1,17 @@
-<!--Specifies the version of HTML being used-->
 <!DOCTYPE html>
-<!--Defines the root element of an HTML document-->
 <html>
-  <!--Contains metadata about the document, such as the title, stylesheets, and scripts-->
   <head>
-    <!--Defines the title of the document, which appears in the browser's title bar and in search results-->
-    <title>JobHive</title>
-    <!--When you are trying  to link your css file and html file we use
-      the link tag.This must be placed within the head tag. The link tag has 
-      two parameters one is the 'rel' paramter, the 'rel' paramter is set as stylesheet. 
-      This informs the browser that the file that you are trying to link to is a CSS file. 
-      The second paramter is the href paramter in whihc you provide the link to the css file. 
-      If the file is not in the same directory as the css file then use ../ to go to the
-      root directory and the provide the path to the CSS file-->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--When you are trying  to link your javaScript file and html file we use
-      the script tag.This must be placed within the head tag. The script tag has 
-      a parameter which is the 'src' paramter, the 'src' paramter is provided with
-      the link to the javaScript file. If the file is not in the same directory as 
-      the css file then use ../ to go to the root directory and the provide the path to the CSS file-->
-    <script src="../javaScript/home.js"></script>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
   </head>
-  <!--Contains theleft main content of the document, the body tag is a must unlike a main tag-->
   <body>
-    <!--The <nav> tag is used to define a section of a web page that contains navigation links. 
-      Typically, this would be a menu that helps users to navigate between different pages 
-      or sections of a site. Using the <nav> tag can help to improve the accessibility 
-      and organization of your site, since it provides a clear indicator of where the 
-      navigation begins and ends. -->
-    <nav>
-      <a class="headTitle" href="#">JobHive</a>
-      <!--<ul> and <ol>: Define unordered and ordered lists, respectively
-        in an orderd list the elements will be numbered, whereas in an 
-        unordered list the elements will have bullet points-->
-      <ul>
-        <!--<li>: Defines list items within a list-->
-        <!--a style is explicitly mentione here so that whn the user is in the home page the home tab in the 
-        top navigation bar will be semi-transperent so that the usdr will know which tab they are in. while
-        other elemtns will have the navigation styl whihc has been defined for nav ul li a-->
-        <li><a href ="#" style="background-color: #ffffffe4; color: black;">Home</a></li>
-        <li><a href ="pages/about.html">About</a></li>
-        <li><a>Other</a></li>
-      </ul>
-      <a class="profile" href="pages/profile.html"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
-    </nav>
-    <header class="divContainer">
-      <h1>Welcome to JobHive</h1>
-      <h2 style="font-weight: lighter;">Your one-stop-shop for finding your dream job!</h2>
-    </header>
-    <!--It represents the footer of a web page or section of a web page. 
-      It is used to define the bottom part of a web page that usually 
-      contains information about the author, copyright, links to related 
-      pages, or other relevant information about the content of the page.-->
-    <footer>
-      <!--<p>: Defines a paragraph of text-->
-      <p>&copy; JobHive | All Rights Reserved</p>
-    </footer>
+    <div class="login-container">
+      <h1>JobHive Login</h1>
+      <form action="../home.html">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
   </body>
 </html>
-
-<!---->
