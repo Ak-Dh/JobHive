@@ -1,4 +1,4 @@
 function openPage(pageName) {
-    window.location.href = "../html/" + pageName + ".html";
+    window.location.href = "html/" + pageName + ".html";
 }
   
