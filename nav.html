@@ -29,20 +29,22 @@
       or sections of a site. Using the <nav> tag can help to improve the accessibility 
       and organization of your site, since it provides a clear indicator of where the 
       navigation begins and ends. -->
-      
-    <!--#include virtual="nav.html" -->
-    <header class="divContainer">
-      <h1>Welcome to JobHive</h1>
-      <h2 style="font-weight: lighter;">Your one-stop-shop for finding your dream job!</h2>
-    </header>
-    <!--It represents the footer of a web page or section of a web page. 
-      It is used to define the bottom part of a web page that usually 
-      contains information about the author, copyright, links to related 
-      pages, or other relevant information about the content of the page.-->
-    <footer>
-      <!--<p>: Defines a paragraph of text-->
-      <p>&copy; JobHive | All Rights Reserved</p>
-    </footer>
+    <nav>
+      <a class="headTitle" href="#">JobHive</a>
+      <!--<ul> and <ol>: Define unordered and ordered lists, respectively
+        in an orderd list the elements will be numbered, whereas in an 
+        unordered list the elements will have bullet points-->
+      <ul>
+        <!--<li>: Defines list items within a list-->
+        <!--a style is explicitly mentione here so that whn the user is in the home page the home tab in the 
+        top navigation bar will be semi-transperent so that the usdr will know which tab they are in. while
+        other elemtns will have the navigation styl whihc has been defined for nav ul li a-->
+        <li><a href ="#" style="background-color: #ffffffe4; color: black;">Home</a></li>
+        <li><a href ="html/about.html">About</a></li>
+        <li><a>Other</a></li>
+      </ul>
+      <a class="profile" href="html/profile.html"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
+    </nav>
   </body>
 </html>
 
