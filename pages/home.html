@@ -10,42 +10,20 @@
     />
     <script src="../javaScript/home.js"></script>
   </head>
-  <body>
-    <nav>
-      <div>
-        <a class="headTitle" href="#">JobHive</a>
-        <ul>
-          <li>
-            <a
-              href="#"
-              style="background-color: var(--nav-selected); color: var(--black)"
-              >Home</a
-            >
-          </li>
-          <li><a href="./about.html">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <a class="profile" href="./profile.html"
-        ><i class="fa fa-fw fa-user-circle" style="font-size: x-large"></i
-      ></a>
-      <a class="profile" href="./settings.html"
-        ><i class="fa fa-fw fa-cog" style="font-size: x-large"></i
-      ></a>
-      <a class="profile" href="../index.html"
-        ><i class="fa fa-fw fa-sign-out" style="font-size: x-large"></i
-      ></a>
-    </div>
-    </nav>
+  <body  onload="includeNavbar()">
+    <div id="navbar"></div>
     <main class="divContainer">
-    <header class="magnified-text">
-      <h1>Welcome to JobHive</h1>
-      <h2 style="font-weight: lighter; font-size: 90%;">
-        Your Progress, Multiplied Across All Platforms.
-      </h2>
-    </header>
+      <header class="magnified-text">
+        <h1>Welcome to JobHive</h1>
+        <h2 style="font-weight: lighter; font-size: 90%">
+          Your Progress, Multiplied Across All Platforms.
+        </h2>
+      </header>
       <div class="search-container">
-        <input type="text" placeholder="Type the name of the organisation or the role you are intrested in...">
+        <input
+          type="text"
+          placeholder="Type the name of the organisation or the role you are intrested in..."
+        />
         <button type="submit"><i class="fa fa-search"></i></button>
       </div>
     </main>
