@@ -2,7 +2,7 @@ function includeNavbar() {
   const navbarElement = document.getElementById("navbar");
   if (navbarElement) {
     const navbarXhr = new XMLHttpRequest();
-    navbarXhr.open("GET", "navbar.html", true);
+    navbarXhr.open("GET", "../pages/navbar.html", true);
     navbarXhr.send();
 
     window.addEventListener("load", function() {
