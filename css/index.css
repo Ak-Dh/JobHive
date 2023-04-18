@@ -1,62 +1,73 @@
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100;
-  width: 62%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../assests/img/background8.jpg');
-  background-size: 100%;
-  background-position: center bottom;
-
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
 }
 
-form {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 40%;
-  height: 100%;
-  border-top-right-radius: 2%;
-  border-bottom-right-radius: 2%;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
+
+.headTitle {
+	display: block;
+	color: var(--white);
+	text-align: center;
+	text-decoration: none;
+	font-size: xx-large;
+	margin: 0;
+	padding: 30px;
+  }
+
+nav {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--blue);
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 11%;
+	width: 100%;
+	justify-content: space-between;
+  }
+  
+  nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav ul li {
+	margin: 0px 0px;
+  }
+  
+  nav ul li a {
+	float: left;
+	display: block;
+	color: var(--white);
+	text-align: center;
+	font-size: medium;
+	text-decoration: none;
+	padding: 40px 20px;
+  }
+  
+
+.landing {
+	padding: 20px;
+	margin-top: 5%;
 }
-  
-  h1 {
-    font-size: xx-large;
-    margin-bottom: 50px;
-  }
-  
-  input[type="text"], input[type="password"] {
-    display: block;
-    width: 90%;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--text-field-light-grey);
-  }
-  
-  button[type="submit"] {
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    width: 98%;
-  }
-  
+
+footer {
+	background-color: var(--blue);
+	color: var(--white);
+	padding: 20px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
