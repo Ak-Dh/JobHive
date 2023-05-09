@@ -9,11 +9,29 @@
   <body>
     <div>
       <div class="container"></div>
-      <form action="./home.html">
+      <form method="post" action="../php/sign-in.php">
         <h1>JobHive</h1>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
+        <input
+          type="text"
+          placeholder="Username/Email"
+          name="username"
+          id="username"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+          required
+        />
         <button type="submit">Sign In</button>
+        <p style="padding: 40px; color: var(--black)">
+          Don't have an Acoount?
+          <a href="./create-account.html" style="color: var(--blue)"
+            >create an account now.</a
+          >
+        </p>
       </form>
     </div>
   </body>

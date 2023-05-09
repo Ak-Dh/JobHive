@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/create-account.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom-themes.css" />
+    <script src="../javaScript/create-account.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="container"></div>
+      <form method="post" action="../php/create_account.php">
+        <h1>JobHive</h1>
+        <input type="text" placeholder="First Name" name="fname" id="fname" required/>
+        <input type="text" placeholder="Last Name" name="lname" id="lname" required/>
+        <input type="email" placeholder="Email" name="email" id="email" required/>
+        <input type="text" placeholder="Username" name="username" id="username" required/>
+        <input type="password" placeholder="Password" name="password" id="password" required/>
+        <button type="submit">Sign In</button>
+        <p style="padding: 40px; color: var(--black);"> Already have an acoount? <a href="./sign-in.html" style="color: var(--blue);">sign in now.</a></p>
+      </form>
+    </div>
+  </body>
+</html>

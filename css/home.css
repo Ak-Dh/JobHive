@@ -5,6 +5,11 @@ body {
   line-height: 1.5;
 }
 
+.divContainer {
+  margin-left: 12%;
+}
+
+
 .search-container {
   display: flex;
   justify-content: center;

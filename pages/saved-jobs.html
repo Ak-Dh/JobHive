@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>JobHive</title>
-    <link rel="stylesheet" type="text/css" href="../css/settings.css" />
+    <link rel="stylesheet" type="text/css" href="../css/saved-jobs.css" />
     <link rel="stylesheet" type="text/css" href="../css/custom-themes.css" />
     <link
       rel="stylesheet"
@@ -10,10 +10,14 @@
     />
     <script src="../javaScript/saved-jobs.js"></script>
   </head>
-  <body onload="includeNavbar()">
+  <body onload="includeNavbar(); createGrid(1);">
     <div id="navbar"></div>
     <header class="divContainer">
       <h1>Saved Jobs</h1>
     </header>
+    <div id="navbar"></div>
+    <main class="divContainer">
+      <div id="saved-jobs"></div>
+    </main>
   </body>
 </html>

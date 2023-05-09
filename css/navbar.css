@@ -39,10 +39,6 @@ nav a:hover {
   color: var(--black);
 }
 
-.divContainer {
-  margin-left: 12%;
-}
-
 nav ul {
   display: flex;
   flex-direction: column;

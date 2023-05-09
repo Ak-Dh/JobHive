@@ -10,7 +10,7 @@
     />
     <script src="../javaScript/home.js"></script>
   </head>
-  <body  onload="includeNavbar()">
+  <body onload="includeNavbar()">
     <div id="navbar"></div>
     <main class="divContainer">
       <header class="magnified-text">
@@ -19,13 +19,15 @@
           Your Progress, Multiplied Across All Platforms.
         </h2>
       </header>
-      <div class="search-container">
-        <input
-          type="text"
-          placeholder="Type the name of the organisation or the role you are intrested in..."
-        />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </div>
+      <form id="search-form" class="search-container" action="./search_results.html">
+          <input
+            type="text"
+            name="search-query"
+            id="search-query"
+            placeholder="Type the name of the organisation or the role you are intrested in..."
+          />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </main>
   </body>
 </html>

@@ -62,9 +62,7 @@ var title = [
   "Financial Analyst",
   "Executive Assistant",
 ];
-
 var positionType = ["Full-Time", "Part-Time", "Internship", "Working Student"];
-
 var jobDescription = [
   [
     "Assist in the development and execution of research projects",
@@ -127,22 +125,33 @@ var jobDescription = [
     "Write clean, efficient, and well-documented code",
   ],
 ];
+var urls = [
+  "https://careers.google.com/jobs/results/122318656848700102-student-researcher-2023/?src=Online%2FLinkedIn%2Flinkedin_us&utm_campaign=contract&utm_medium=jobposting&utm_source=linkedin",
+  "https://karriere.berlin-airport.de/job/BER-IT-Systemelektroniker-Fernmeldetechniker-Mechatroniker-%28mwd%29-f%C3%BCr-IT-Netzinfrastruktur-4924/917141401/",
+  "https://keeunit.onapply.de/details/185731.html?source=careerSiteWidget",
+  "https://jobs.check24.de/en/jobs/java-development/61748-4418-java-backend-entwickler-mwd-kfz-versicherungen/?agid=627",
+  "https://careers.google.com/jobs/results/122318656848700102-student-researcher-2023/?src=Online%2FLinkedIn%2Flinkedin_us&utm_campaign=contract&utm_medium=jobposting&utm_source=linkedin",
+  "https://karriere.berlin-airport.de/job/BER-IT-Systemelektroniker-Fernmeldetechniker-Mechatroniker-%28mwd%29-f%C3%BCr-IT-Netzinfrastruktur-4924/917141401/",
+  "https://keeunit.onapply.de/details/185731.html?source=careerSiteWidget",
+  "https://jobs.check24.de/en/jobs/java-development/61748-4418-java-backend-entwickler-mwd-kfz-versicherungen/?agid=627",
+  "https://careers.google.com/jobs/results/122318656848700102-student-researcher-2023/?src=Online%2FLinkedIn%2Flinkedin_us&utm_campaign=contract&utm_medium=jobposting&utm_source=linkedin",
+  "https://karriere.berlin-airport.de/job/BER-IT-Systemelektroniker-Fernmeldetechniker-Mechatroniker-%28mwd%29-f%C3%BCr-IT-Netzinfrastruktur-4924/917141401/",
+  "https://keeunit.onapply.de/details/185731.html?source=careerSiteWidget",
+  "https://jobs.check24.de/en/jobs/java-development/61748-4418-java-backend-entwickler-mwd-kfz-versicherungen/?agid=627",
+  "https://careers.google.com/jobs/results/122318656848700102-student-researcher-2023/?src=Online%2FLinkedIn%2Flinkedin_us&utm_campaign=contract&utm_medium=jobposting&utm_source=linkedin",
+  "https://karriere.berlin-airport.de/job/BER-IT-Systemelektroniker-Fernmeldetechniker-Mechatroniker-%28mwd%29-f%C3%BCr-IT-Netzinfrastruktur-4924/917141401/",
+  "https://keeunit.onapply.de/details/185731.html?source=careerSiteWidget",
+  "https://jobs.check24.de/en/jobs/java-development/61748-4418-java-backend-entwickler-mwd-kfz-versicherungen/?agid=627",
 
-function getJobData() {
-  const title = localStorage.getItem('title');
-  const positionType = localStorage.getItem('positionType');
-  const jobDescription = JSON.parse(localStorage.getItem('jobDescription'));
-
-  return { title, positionType, jobDescription };
-}
+];
 
 function createGrid(numRows) {
   const numCols = 1;
   const containerWidth = 100;
   const containerHeight = 200;
-  
-  const savedJobsDiv = document.getElementById("saved-jobs");
-  savedJobsDiv.innerHTML = "";
+
+  const searchResultsDiv = document.getElementById("search-results");
+  searchResultsDiv.innerHTML = "";
 
   for (let i = 0; i < numRows; i++) {
     var rand = Math.floor(Math.random() * positionType.length);
@@ -228,7 +237,7 @@ function createGrid(numRows) {
       buttonContainerDiv.style.alignItems = "center";
 
       const button1 = document.createElement("button");
-      button1.textContent = "UnSave Job";
+      button1.textContent = "Save Job";
       button1.style.margin = "10px 10px";
       button1.style.width = "90%";
       button1.style.height = "50%";
@@ -238,7 +247,7 @@ function createGrid(numRows) {
       button1.style.border = "none";
       button1.style.borderRadius = "10px";
       button1.style.cursor = "pointer";
-      button1.onclick = removeSavedJob();
+      button1.onclick = SaveJob(title[i], positionType[rand]);
       buttonContainerDiv.appendChild(button1);
 
       const button2 = document.createElement("button");
@@ -252,6 +261,7 @@ function createGrid(numRows) {
       button2.style.border = "none";
       button2.style.borderRadius = "10px";
       button2.style.cursor = "pointer";
+      button2.onclick = openJob(urls[i]);
       buttonContainerDiv.appendChild(button2);
 
       containerDiv.appendChild(buttonContainerDiv);
@@ -259,13 +269,64 @@ function createGrid(numRows) {
       rowDiv.appendChild(containerDiv);
     }
 
-    savedJobsDiv.appendChild(rowDiv);
+    searchResultsDiv.appendChild(rowDiv);
   }
 }
 
-function removeSavedJob(){
+function SaveJob(title, positionType, jobDescription) {
+  // Save the job data to local storage
+  localStorage.setItem("title", title);
+  localStorage.setItem("positionType", positionType);
+  localStorage.setItem("jobDescription", JSON.stringify(jobDescription));
 
-  const savedJobsDiv = document.getElementById("saved-jobs");
-  savedJobsDiv.innerHTML = "";
+  // Show a confirmation message to the user
+  console.log("job saved");
+}
 
+function openJob(urls){
+  // window.location.href = urls;
+}
+
+// JavaScript code in index.html
+
+function searchJobs() {
+  const searchQuery = document.getElementById("search-query").value;
+
+  // Make an AJAX request to the PHP file that will call the LinkedIn API
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "search_jobs.php?q=" + searchQuery);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      displaySearchResults(response);
+    } else {
+      console.error(xhr.responseText);
+    }
+  };
+  xhr.send();
+}
+
+function displaySearchResults(response) {
+  // Process the API response and display the results in the HTML page
+  const results = response.elements;
+  const list = document.getElementById("search-results");
+  list.innerHTML = "";
+
+  for (let i = 0; i < results.length; i++) {
+    const job = results[i];
+    const title = job.title.text;
+    const description = job.description.text;
+
+    const listItem = document.createElement("li");
+    const titleElement = document.createElement("h3");
+    const descriptionElement = document.createElement("p");
+
+    titleElement.textContent = title;
+    descriptionElement.textContent = description;
+
+    listItem.appendChild(titleElement);
+    listItem.appendChild(descriptionElement);
+
+    list.appendChild(listItem);
+  }
 }
