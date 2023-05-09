@@ -62,7 +62,9 @@ var title = [
   "Financial Analyst",
   "Executive Assistant",
 ];
+
 var positionType = ["Full-Time", "Part-Time", "Internship", "Working Student"];
+
 var jobDescription = [
   [
     "Assist in the development and execution of research projects",
@@ -125,6 +127,7 @@ var jobDescription = [
     "Write clean, efficient, and well-documented code",
   ],
 ];
+
 var urls = [
   "https://careers.google.com/jobs/results/122318656848700102-student-researcher-2023/?src=Online%2FLinkedIn%2Flinkedin_us&utm_campaign=contract&utm_medium=jobposting&utm_source=linkedin",
   "https://karriere.berlin-airport.de/job/BER-IT-Systemelektroniker-Fernmeldetechniker-Mechatroniker-%28mwd%29-f%C3%BCr-IT-Netzinfrastruktur-4924/917141401/",
