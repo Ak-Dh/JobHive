@@ -18,7 +18,7 @@ $user_input_username = $_POST['username'];
 $user_input_password = $_POST['password'];
 
 // Prepare and bind the SQL statement
-$stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
+$stmt = $conn->prepare("SELECT password FROM user WHERE username = ?");
 $stmt->bind_param("s", $user_input_username);
 
 // Execute the statement and store the result
