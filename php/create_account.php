@@ -24,7 +24,7 @@ $user_input_password = $_POST['password'];
 $hashed_password = password_hash($user_input_password, PASSWORD_DEFAULT);
 
 // Prepare and bind the SQL statement
-$stmt = $conn->prepare("INSERT INTO user (id, first_name, last_name, email, password, username) VALUES ('1',?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO user (first_name, last_name, email, password, username) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("sssss", $fname, $lname, $email, $hashed_password, $user_input_username);
 
 // Execute the statement
